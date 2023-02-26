@@ -1,0 +1,14 @@
+<div class="task">
+    <div class="task-panel">
+        <h1 class="title">Let´s edit your task!</h1>
+        <input type="text" class="input-text edit-text" placeholder="Enter the task name">
+        <div class="progress">
+            <label class="label">Drag to select your current progress</label>
+            <div class="progress-group">
+                <p-slider class="slider" [(ngModel)]="progress" [style]="{width: '80%'}"></p-slider>
+                <span class="progress-amount">{{progress}}%</span>
+            </div>
+        </div>
+        <button type="submit" class="button modify">submit</button>
+    </div>
+</div>

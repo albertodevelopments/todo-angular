@@ -1,0 +1,59 @@
+<div class="taskslist">
+    <div class="container">
+        <div class="header">
+            <div class="title-block">
+                <img src="../../../assets/img/icon.jpg" alt="Icon" class="icon">
+                <h1 class="title">See your tasks...</h1>
+            </div>
+            <button class="button language">change language</button>
+        </div>
+        <div class="hero">
+            <h2 class="welcome">Welcome back!</h2>
+            <div class="actions">
+                <button class="button add-task" (click)="toggleModalDialog(true)">add new</button>
+                <button class="button sign-out">sign out</button>
+            </div>
+        </div>
+        <ul class="tasks">
+            <li class="task">
+                <div class="taskname-group">
+                        <svg class="complete" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                    <span class="taskname">Clean mom's boots</span>
+                </div>
+                <div class="actions">
+                    <button class="button edit" (click)="toggleModalDialog(true)">edit</button>
+                    <button class="button delete">delete</button>
+                </div>
+            </li>
+            <li class="task">
+                <div class="taskname-group">
+                    <img src="../../../assets/img/check.svg" alt="Checked!" class="complete">
+                    <span class="taskname">Walk the dog</span>
+                </div>
+                <div class="actions">
+                    <button class="button edit">edit</button>
+                    <button class="button delete">delete</button>
+                </div>
+            </li>
+            <li class="task">
+                <div class="taskname-group">
+                    <img src="../../../assets/img/check.svg" alt="Checked!" class="complete">
+                    <span class="taskname">Learn Angular 😀</span>
+                </div>
+                <div class="actions">
+                    <button class="button edit">edit</button>
+                    <button class="button delete">delete</button>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+    <app-task-dialog 
+        #dialogWindow
+        *ngIf="dialogShown"
+        (showModal)="toggleModalDialog($event)"
+    ></app-task-dialog>
+</div>
+
+
+

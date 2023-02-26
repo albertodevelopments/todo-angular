@@ -1,0 +1,29 @@
+<div class="login">
+    <div class="login-box">
+        <h1 class="title">Please log in</h1>
+        <form 
+            class="login-form"
+            [formGroup]="loginForm"
+            >
+            <input 
+                type="email" 
+                class="input-text login-input" 
+                placeholder="Enter your e-mail"
+                formControlName="email"
+                >
+            <input 
+                type="password" 
+                class="input-text login-input" 
+                placeholder="Enter a password"
+                formControlName="password"
+                >
+            <button type="submit" class="btn-submit">
+                go!
+            </button>
+        </form>
+        <div class="footer">
+            <button class="btn btn-signup">sign up</button>
+            <button class="btn btn-login">login</button>
+        </div>
+    </div>
+</div>
